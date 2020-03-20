@@ -847,8 +847,8 @@ void SCH_TblInit_Test_LoadSdtError(void)
     UtAssert_True(SCH_AppData.TablePassCount          == 0, "SCH_AppData.TablePassCount          == 0");
 
     UtAssert_True
-        (Ut_CFE_EVS_EventSent(SCH_SDT_LOAD_ERR_EID, CFE_EVS_ERROR, "Error (RC=0xFFFFFFFF) Loading SDT with /cf/apps/sch_def_schtbl.tbl"),
-        "Error (RC=0xFFFFFFFF) Loading SDT with /cf/apps/sch_def_schtbl.tbl");
+        (Ut_CFE_EVS_EventSent(SCH_SDT_LOAD_ERR_EID, CFE_EVS_ERROR, "Error (RC=0xFFFFFFFF) Loading SDT with /cf/sch_def_schtbl.tbl"),
+        "Error (RC=0xFFFFFFFF) Loading SDT with /cf/sch_def_schtbl.tbl");
 
     UtAssert_True (Result == -1, "Result == -1");
 
@@ -888,8 +888,8 @@ void SCH_TblInit_Test_LoadMdtError(void)
     UtAssert_True(SCH_AppData.TablePassCount          == 0, "SCH_AppData.TablePassCount          == 0");
 
     UtAssert_True
-        (Ut_CFE_EVS_EventSent(SCH_MDT_LOAD_ERR_EID, CFE_EVS_ERROR, "Error (RC=0xCC000013) Loading MDT with /cf/apps/sch_def_msgtbl.tbl"),
-        "Error (RC=0xCC000013) Loading MDT with /cf/apps/sch_def_msgtbl.tbl");
+        (Ut_CFE_EVS_EventSent(SCH_MDT_LOAD_ERR_EID, CFE_EVS_ERROR, "Error (RC=0xCC000013) Loading MDT with /cf/sch_def_msgtbl.tbl"),
+        "Error (RC=0xCC000013) Loading MDT with /cf/sch_def_msgtbl.tbl");
 
     UtAssert_True (Result == 0xCC000013, "Result == 0xCC000013");
 
